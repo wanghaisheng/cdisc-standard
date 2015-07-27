@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <title>healthcarelink-userguide</title>
+      <style>.markdown-preview, .markdown-preview[data-use-github-style] { font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif; font-size: 16px; line-height: 1.6; word-wrap: break-word; overflow: scroll; box-sizing: border-box; padding: 20px; background-color: rgb(255, 255, 255); }
+.markdown-preview > :first-child, .markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview > :last-child, .markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview a:not([href]), .markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview .absent, .markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview .anchor, .markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview .anchor:focus, .markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview h1, .markdown-preview[data-use-github-style] h1, .markdown-preview h2, .markdown-preview[data-use-github-style] h2, .markdown-preview h3, .markdown-preview[data-use-github-style] h3, .markdown-preview h4, .markdown-preview[data-use-github-style] h4, .markdown-preview h5, .markdown-preview[data-use-github-style] h5, .markdown-preview h6, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview h1 .octicon-link, .markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview h2 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview h3 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview h4 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview h5 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview h6 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview h1:hover .anchor, .markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview h2:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview h3:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview h4:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview h5:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview h6:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview h6:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview h1 tt, .markdown-preview[data-use-github-style] h1 tt, .markdown-preview h2 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview h3 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview h4 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview h5 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview h6 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview h1 code, .markdown-preview[data-use-github-style] h1 code, .markdown-preview h2 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview h3 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview h4 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview h5 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview h6 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview h1, .markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+.markdown-preview h1 .anchor, .markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview h2, .markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+.markdown-preview h2 .anchor, .markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview h3, .markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview h3 .anchor, .markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview h4, .markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview h4 .anchor, .markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview h5, .markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview h5 .anchor, .markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview h6, .markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview h6 .anchor, .markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview p, .markdown-preview[data-use-github-style] p, .markdown-preview blockquote, .markdown-preview[data-use-github-style] blockquote, .markdown-preview ul, .markdown-preview[data-use-github-style] ul, .markdown-preview ol, .markdown-preview[data-use-github-style] ol, .markdown-preview dl, .markdown-preview[data-use-github-style] dl, .markdown-preview table, .markdown-preview[data-use-github-style] table, .markdown-preview pre, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview hr, .markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; border: 0px none; background-color: rgb(231, 231, 231); }
+.markdown-preview ul, .markdown-preview[data-use-github-style] ul, .markdown-preview ol, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview ul.no-list, .markdown-preview[data-use-github-style] ul.no-list, .markdown-preview ol.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview ul ul, .markdown-preview[data-use-github-style] ul ul, .markdown-preview ul ol, .markdown-preview[data-use-github-style] ul ol, .markdown-preview ol ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview ol ul, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview li > p, .markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview dl, .markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview dl dt, .markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview dl dd, .markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview blockquote, .markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left-width: 4px; border-left-style: solid; border-left-color: rgb(221, 221, 221); }
+.markdown-preview blockquote > :first-child, .markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview blockquote > :last-child, .markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview table, .markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: normal; }
+.markdown-preview table th, .markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview table th, .markdown-preview[data-use-github-style] table th, .markdown-preview table td, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview table tr, .markdown-preview[data-use-github-style] table tr { border-top-width: 1px; border-top-style: solid; border-top-color: rgb(204, 204, 204); background-color: rgb(255, 255, 255); }
+.markdown-preview table tr:nth-child(2n), .markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview img, .markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview .emoji, .markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview span.frame, .markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview span.frame > span, .markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview span.frame span img, .markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview span.frame span span, .markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview span.align-center, .markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview span.align-center > span, .markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview span.align-center span img, .markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview span.align-right, .markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview span.align-right > span, .markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview span.align-right span img, .markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview span.float-left, .markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview span.float-left span, .markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview span.float-right, .markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview span.float-right > span, .markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview code, .markdown-preview[data-use-github-style] code, .markdown-preview tt, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; border-radius: 3px; background-color: rgba(0, 0, 0, 0.0392157); }
+.markdown-preview code::before, .markdown-preview[data-use-github-style] code::before, .markdown-preview tt::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview code::after, .markdown-preview[data-use-github-style] code::after, .markdown-preview tt::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: ' '; }
+.markdown-preview code br, .markdown-preview[data-use-github-style] code br, .markdown-preview tt br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview del code, .markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview pre > code, .markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; border: 0px; background: transparent; }
+.markdown-preview .highlight, .markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview .highlight pre, .markdown-preview[data-use-github-style] .highlight pre, .markdown-preview pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; border-radius: 3px; background-color: rgb(247, 247, 247); }
+.markdown-preview .highlight pre, .markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview pre, .markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview pre code, .markdown-preview[data-use-github-style] pre code, .markdown-preview pre tt, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; border: 0px; background-color: transparent; }
+.markdown-preview pre code::before, .markdown-preview[data-use-github-style] pre code::before, .markdown-preview pre tt::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview pre code::after, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview pre tt::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview kbd, .markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; border-style: solid; border-width: 1px; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; background-color: rgb(252, 252, 252); }
+.markdown-preview, .markdown-preview[data-use-github-style], .markdown-preview code, .markdown-preview[data-use-github-style] code { color: rgb(51, 51, 51); }
+.markdown-preview h1, .markdown-preview[data-use-github-style] h1, .markdown-preview h2, .markdown-preview[data-use-github-style] h2, .markdown-preview h3, .markdown-preview[data-use-github-style] h3, .markdown-preview h4, .markdown-preview[data-use-github-style] h4, .markdown-preview h5, .markdown-preview[data-use-github-style] h5, .markdown-preview h6, .markdown-preview[data-use-github-style] h6 { -webkit-font-smoothing: antialiased; cursor: text; }
+.markdown-preview > h1:first-child, .markdown-preview[data-use-github-style] > h1:first-child, .markdown-preview > h1:first-child + h2, .markdown-preview[data-use-github-style] > h1:first-child + h2, .markdown-preview > h2:first-child, .markdown-preview[data-use-github-style] > h2:first-child, .markdown-preview > h3:first-child, .markdown-preview[data-use-github-style] > h3:first-child, .markdown-preview > h4:first-child, .markdown-preview[data-use-github-style] > h4:first-child, .markdown-preview > h5:first-child, .markdown-preview[data-use-github-style] > h5:first-child, .markdown-preview > h6:first-child, .markdown-preview[data-use-github-style] > h6:first-child { margin-top: 0px; padding-top: 0px; }
+.markdown-preview a, .markdown-preview[data-use-github-style] a, .markdown-preview a code, .markdown-preview[data-use-github-style] a code { color: rgb(65, 131, 196); }
+.markdown-preview a:first-child h1, .markdown-preview[data-use-github-style] a:first-child h1, .markdown-preview a:first-child h2, .markdown-preview[data-use-github-style] a:first-child h2, .markdown-preview a:first-child h3, .markdown-preview[data-use-github-style] a:first-child h3, .markdown-preview a:first-child h4, .markdown-preview[data-use-github-style] a:first-child h4, .markdown-preview a:first-child h5, .markdown-preview[data-use-github-style] a:first-child h5, .markdown-preview a:first-child h6, .markdown-preview[data-use-github-style] a:first-child h6 { margin-top: 0px; padding-top: 0px; }
+.markdown-preview h1 + p, .markdown-preview[data-use-github-style] h1 + p, .markdown-preview h2 + p, .markdown-preview[data-use-github-style] h2 + p, .markdown-preview h3 + p, .markdown-preview[data-use-github-style] h3 + p, .markdown-preview h4 + p, .markdown-preview[data-use-github-style] h4 + p, .markdown-preview h5 + p, .markdown-preview[data-use-github-style] h5 + p, .markdown-preview h6 + p, .markdown-preview[data-use-github-style] h6 + p { margin-top: 0px; }
+.markdown-preview li p.first, .markdown-preview[data-use-github-style] li p.first { display: inline-block; }
+.markdown-preview ul li > :first-child, .markdown-preview[data-use-github-style] ul li > :first-child, .markdown-preview ol li > :first-child, .markdown-preview[data-use-github-style] ol li > :first-child, .markdown-preview ul li ul:first-of-type, .markdown-preview[data-use-github-style] ul li ul:first-of-type, .markdown-preview ol li ul:first-of-type, .markdown-preview[data-use-github-style] ol li ul:first-of-type { margin-top: 0px; }
+.markdown-preview ol > li, .markdown-preview[data-use-github-style] ol > li { list-style-type: decimal; }
+.markdown-preview ul > li, .markdown-preview[data-use-github-style] ul > li { list-style-type: disc; }
+.markdown-preview dl dt:first-child, .markdown-preview[data-use-github-style] dl dt:first-child { padding: 0px; }
+.markdown-preview dl dt > :first-child, .markdown-preview[data-use-github-style] dl dt > :first-child { margin-top: 0px; }
+.markdown-preview dl dt > :last-child, .markdown-preview[data-use-github-style] dl dt > :last-child { margin-bottom: 0px; }
+.markdown-preview dl dd > :first-child, .markdown-preview[data-use-github-style] dl dd > :first-child { margin-top: 0px; }
+.markdown-preview dl dd > :last-child, .markdown-preview[data-use-github-style] dl dd > :last-child { margin-bottom: 0px; }
+.markdown-preview blockquote p, .markdown-preview[data-use-github-style] blockquote p { font-size: 16px; line-height: 1.5; }
+.markdown-preview pre.editor-colors, .markdown-preview[data-use-github-style] pre.editor-colors { padding: 16px; overflow: auto; font-size: 84%; line-height: 1.45; border-radius: 3px; background-color: rgb(40, 44, 52); }
+.markdown-preview pre, .markdown-preview[data-use-github-style] pre, .markdown-preview pre.editor-colors, .markdown-preview[data-use-github-style] pre.editor-colors { margin-bottom: 16px; word-break: normal; }
+.markdown-preview pre, .markdown-preview[data-use-github-style] pre, .markdown-preview code, .markdown-preview[data-use-github-style] code, .markdown-preview tt, .markdown-preview[data-use-github-style] tt, .markdown-preview pre.editor-colors, .markdown-preview[data-use-github-style] pre.editor-colors { font-family: Consolas, 'Liberation Mono', Courier, monospace; }
+.markdown-preview .emoji, .markdown-preview[data-use-github-style] .emoji { height: 20px; width: 20px; }
+.markdown-preview, .markdown-preview[data-use-github-style] { font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif; font-size: 16px; line-height: 1.6; word-wrap: break-word; overflow: scroll; box-sizing: border-box; padding: 20px; background-color: rgb(255, 255, 255); }
+.markdown-preview > :first-child, .markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview > :last-child, .markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview a:not([href]), .markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview .absent, .markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview .anchor, .markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview .anchor:focus, .markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview h1, .markdown-preview[data-use-github-style] h1, .markdown-preview h2, .markdown-preview[data-use-github-style] h2, .markdown-preview h3, .markdown-preview[data-use-github-style] h3, .markdown-preview h4, .markdown-preview[data-use-github-style] h4, .markdown-preview h5, .markdown-preview[data-use-github-style] h5, .markdown-preview h6, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview h1 .octicon-link, .markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview h2 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview h3 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview h4 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview h5 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview h6 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview h1:hover .anchor, .markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview h2:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview h3:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview h4:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview h5:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview h6:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview h6:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview h1 tt, .markdown-preview[data-use-github-style] h1 tt, .markdown-preview h2 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview h3 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview h4 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview h5 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview h6 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview h1 code, .markdown-preview[data-use-github-style] h1 code, .markdown-preview h2 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview h3 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview h4 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview h5 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview h6 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview h1, .markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+.markdown-preview h1 .anchor, .markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview h2, .markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+.markdown-preview h2 .anchor, .markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview h3, .markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview h3 .anchor, .markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview h4, .markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview h4 .anchor, .markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview h5, .markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview h5 .anchor, .markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview h6, .markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview h6 .anchor, .markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview p, .markdown-preview[data-use-github-style] p, .markdown-preview blockquote, .markdown-preview[data-use-github-style] blockquote, .markdown-preview ul, .markdown-preview[data-use-github-style] ul, .markdown-preview ol, .markdown-preview[data-use-github-style] ol, .markdown-preview dl, .markdown-preview[data-use-github-style] dl, .markdown-preview table, .markdown-preview[data-use-github-style] table, .markdown-preview pre, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview hr, .markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; border: 0px none; background-color: rgb(231, 231, 231); }
+.markdown-preview ul, .markdown-preview[data-use-github-style] ul, .markdown-preview ol, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview ul.no-list, .markdown-preview[data-use-github-style] ul.no-list, .markdown-preview ol.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview ul ul, .markdown-preview[data-use-github-style] ul ul, .markdown-preview ul ol, .markdown-preview[data-use-github-style] ul ol, .markdown-preview ol ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview ol ul, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview li > p, .markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview dl, .markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview dl dt, .markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview dl dd, .markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview blockquote, .markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left-width: 4px; border-left-style: solid; border-left-color: rgb(221, 221, 221); }
+.markdown-preview blockquote > :first-child, .markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview blockquote > :last-child, .markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview table, .markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: normal; }
+.markdown-preview table th, .markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview table th, .markdown-preview[data-use-github-style] table th, .markdown-preview table td, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview table tr, .markdown-preview[data-use-github-style] table tr { border-top-width: 1px; border-top-style: solid; border-top-color: rgb(204, 204, 204); background-color: rgb(255, 255, 255); }
+.markdown-preview table tr:nth-child(2n), .markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview img, .markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview .emoji, .markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview span.frame, .markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview span.frame > span, .markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview span.frame span img, .markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview span.frame span span, .markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview span.align-center, .markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview span.align-center > span, .markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview span.align-center span img, .markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview span.align-right, .markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview span.align-right > span, .markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview span.align-right span img, .markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview span.float-left, .markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview span.float-left span, .markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview span.float-right, .markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview span.float-right > span, .markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview code, .markdown-preview[data-use-github-style] code, .markdown-preview tt, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; border-radius: 3px; background-color: rgba(0, 0, 0, 0.0392157); }
+.markdown-preview code::before, .markdown-preview[data-use-github-style] code::before, .markdown-preview tt::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview code::after, .markdown-preview[data-use-github-style] code::after, .markdown-preview tt::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: ' '; }
+.markdown-preview code br, .markdown-preview[data-use-github-style] code br, .markdown-preview tt br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview del code, .markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview pre > code, .markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; border: 0px; background: transparent; }
+.markdown-preview .highlight, .markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview .highlight pre, .markdown-preview[data-use-github-style] .highlight pre, .markdown-preview pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; border-radius: 3px; background-color: rgb(247, 247, 247); }
+.markdown-preview .highlight pre, .markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview pre, .markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview pre code, .markdown-preview[data-use-github-style] pre code, .markdown-preview pre tt, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; border: 0px; background-color: transparent; }
+.markdown-preview pre code::before, .markdown-preview[data-use-github-style] pre code::before, .markdown-preview pre tt::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview pre code::after, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview pre tt::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview kbd, .markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; border-style: solid; border-width: 1px; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; background-color: rgb(252, 252, 252); }
+.markdown-preview, .markdown-preview[data-use-github-style], .markdown-preview code, .markdown-preview[data-use-github-style] code { color: rgb(51, 51, 51); }
+.markdown-preview h1, .markdown-preview[data-use-github-style] h1, .markdown-preview h2, .markdown-preview[data-use-github-style] h2, .markdown-preview h3, .markdown-preview[data-use-github-style] h3, .markdown-preview h4, .markdown-preview[data-use-github-style] h4, .markdown-preview h5, .markdown-preview[data-use-github-style] h5, .markdown-preview h6, .markdown-preview[data-use-github-style] h6 { -webkit-font-smoothing: antialiased; cursor: text; }
+.markdown-preview > h1:first-child, .markdown-preview[data-use-github-style] > h1:first-child, .markdown-preview > h1:first-child + h2, .markdown-preview[data-use-github-style] > h1:first-child + h2, .markdown-preview > h2:first-child, .markdown-preview[data-use-github-style] > h2:first-child, .markdown-preview > h3:first-child, .markdown-preview[data-use-github-style] > h3:first-child, .markdown-preview > h4:first-child, .markdown-preview[data-use-github-style] > h4:first-child, .markdown-preview > h5:first-child, .markdown-preview[data-use-github-style] > h5:first-child, .markdown-preview > h6:first-child, .markdown-preview[data-use-github-style] > h6:first-child { margin-top: 0px; padding-top: 0px; }
+.markdown-preview a, .markdown-preview[data-use-github-style] a, .markdown-preview a code, .markdown-preview[data-use-github-style] a code { color: rgb(65, 131, 196); }
+.markdown-preview a:first-child h1, .markdown-preview[data-use-github-style] a:first-child h1, .markdown-preview a:first-child h2, .markdown-preview[data-use-github-style] a:first-child h2, .markdown-preview a:first-child h3, .markdown-preview[data-use-github-style] a:first-child h3, .markdown-preview a:first-child h4, .markdown-preview[data-use-github-style] a:first-child h4, .markdown-preview a:first-child h5, .markdown-preview[data-use-github-style] a:first-child h5, .markdown-preview a:first-child h6, .markdown-preview[data-use-github-style] a:first-child h6 { margin-top: 0px; padding-top: 0px; }
+.markdown-preview h1 + p, .markdown-preview[data-use-github-style] h1 + p, .markdown-preview h2 + p, .markdown-preview[data-use-github-style] h2 + p, .markdown-preview h3 + p, .markdown-preview[data-use-github-style] h3 + p, .markdown-preview h4 + p, .markdown-preview[data-use-github-style] h4 + p, .markdown-preview h5 + p, .markdown-preview[data-use-github-style] h5 + p, .markdown-preview h6 + p, .markdown-preview[data-use-github-style] h6 + p { margin-top: 0px; }
+.markdown-preview li p.first, .markdown-preview[data-use-github-style] li p.first { display: inline-block; }
+.markdown-preview ul li > :first-child, .markdown-preview[data-use-github-style] ul li > :first-child, .markdown-preview ol li > :first-child, .markdown-preview[data-use-github-style] ol li > :first-child, .markdown-preview ul li ul:first-of-type, .markdown-preview[data-use-github-style] ul li ul:first-of-type, .markdown-preview ol li ul:first-of-type, .markdown-preview[data-use-github-style] ol li ul:first-of-type { margin-top: 0px; }
+.markdown-preview ol > li, .markdown-preview[data-use-github-style] ol > li { list-style-type: decimal; }
+.markdown-preview ul > li, .markdown-preview[data-use-github-style] ul > li { list-style-type: disc; }
+.markdown-preview dl dt:first-child, .markdown-preview[data-use-github-style] dl dt:first-child { padding: 0px; }
+.markdown-preview dl dt > :first-child, .markdown-preview[data-use-github-style] dl dt > :first-child { margin-top: 0px; }
+.markdown-preview dl dt > :last-child, .markdown-preview[data-use-github-style] dl dt > :last-child { margin-bottom: 0px; }
+.markdown-preview dl dd > :first-child, .markdown-preview[data-use-github-style] dl dd > :first-child { margin-top: 0px; }
+.markdown-preview dl dd > :last-child, .markdown-preview[data-use-github-style] dl dd > :last-child { margin-bottom: 0px; }
+.markdown-preview blockquote p, .markdown-preview[data-use-github-style] blockquote p { font-size: 16px; line-height: 1.5; }
+.markdown-preview pre.editor-colors, .markdown-preview[data-use-github-style] pre.editor-colors { padding: 16px; overflow: auto; font-size: 84%; line-height: 1.45; border-radius: 3px; background-color: rgb(40, 44, 52); }
+.markdown-preview pre.editor-colors, .markdown-preview[data-use-github-style] pre.editor-colors { margin-bottom: 16px; word-break: normal; }
+.markdown-preview code, .markdown-preview[data-use-github-style] code, .markdown-preview tt, .markdown-preview[data-use-github-style] tt, .markdown-preview pre.editor-colors, .markdown-preview[data-use-github-style] pre.editor-colors { font-family: Consolas, 'Liberation Mono', Courier, monospace; }
+.markdown-preview .emoji, .markdown-preview[data-use-github-style] .emoji { height: 20px; width: 20px; }
+.markdown-preview { font-size: 1.25em; color: rgb(200, 204, 213); background-color: rgb(47, 51, 61); }
+.markdown-preview h1, .markdown-preview h2 { color: inherit; border-color: rgb(24, 26, 31); }
+.markdown-preview a { color: rgb(100, 148, 237); }
+.markdown-preview hr { background-color: rgb(47, 51, 61); }
+.markdown-preview blockquote { color: rgb(157, 165, 180); border-left-color: rgba(157, 165, 180, 0.6); }
+.markdown-preview table th, .markdown-preview table td { border-color: rgb(24, 26, 31); }
+.markdown-preview table th { background-color: rgb(53, 59, 69); }
+.markdown-preview table tr { background-color: rgb(47, 51, 61); }
+.markdown-preview table tr:nth-child(2n) { background-color: rgb(40, 44, 52); }
+.markdown-preview code { color: rgb(243, 244, 246); border-color: rgb(24, 26, 31); background-color: rgb(62, 68, 81); background-clip: padding-box; }
+.markdown-preview pre.editor-colors::shadow .line.cursor-line { background-color: transparent; }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 1px dashed rgba(250, 128, 114, 0.5);
+}
+
+pre.editor-colors,
+.host {
+  background-color: #282c34;
+  color: #abb2bf;
+}
+pre.editor-colors .line.cursor-line,
+.host .line.cursor-line {
+  background-color: rgba(153, 187, 255, 0.04);
+}
+pre.editor-colors .invisible,
+.host .invisible {
+  color: #abb2bf;
+}
+pre.editor-colors .cursor,
+.host .cursor {
+  border-left: 2px solid #528bff;
+}
+pre.editor-colors .selection .region,
+.host .selection .region {
+  background-color: #3e4451;
+}
+pre.editor-colors .bracket-matcher .region,
+.host .bracket-matcher .region {
+  border-bottom: 1px solid #528bff;
+  box-sizing: border-box;
+  background-color: #353b45;
+}
+pre.editor-colors .invisible-character,
+.host .invisible-character {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .indent-guide,
+.host .indent-guide {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .wrap-guide,
+.host .wrap-guide {
+  background-color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .gutter .line-number,
+.host .gutter .line-number {
+  color: #636d83;
+  -webkit-font-smoothing: antialiased;
+}
+pre.editor-colors .gutter .line-number.git-line-removed:before,
+.host .gutter .line-number.git-line-removed:before {
+  bottom: -3px;
+}
+pre.editor-colors .gutter .line-number.git-line-removed:after,
+.host .gutter .line-number.git-line-removed:after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 25px;
+  border-bottom: 1px dotted rgba(224, 82, 82, 0.5);
+  pointer-events: none;
+}
+pre.editor-colors .gutter .line-number.cursor-line,
+.host .gutter .line-number.cursor-line {
+  color: #abb2bf;
+  background-color: #2c313a;
+}
+pre.editor-colors .gutter .line-number.cursor-line-no-selection,
+.host .gutter .line-number.cursor-line-no-selection {
+  background-color: transparent;
+}
+pre.editor-colors .gutter .line-number .icon-right,
+.host .gutter .line-number .icon-right {
+  color: #abb2bf;
+}
+pre.editor-colors .gutter .line-number .icon-right,
+.host .gutter .line-number .icon-right {
+  color: #abb2bf;
+}
+pre.editor-colors .gutter .line-number.folded,
+.host .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+.host .gutter .line-number:after,
+pre.editor-colors .fold-marker:after,
+.host .fold-marker:after {
+  color: #abb2bf;
+}
+.comment {
+  color: #5c6370;
+  font-style: italic;
+}
+.entity.name.type {
+  color: #e5c07b;
+}
+.entity.other.inherited-class {
+  color: #98c379;
+}
+.keyword {
+  color: #c678dd;
+}
+.keyword.control {
+  color: #c678dd;
+}
+.keyword.operator {
+  color: #abb2bf;
+}
+.keyword.other.special-method {
+  color: #61afef;
+}
+.keyword.other.unit {
+  color: #d19a66;
+}
+.storage {
+  color: #c678dd;
+}
+.storage.type.annotation,
+.storage.type.primitive {
+  color: #c678dd;
+}
+.storage.modifier.package,
+.storage.modifier.import {
+  color: #abb2bf;
+}
+.constant {
+  color: #d19a66;
+}
+.constant.variable {
+  color: #d19a66;
+}
+.constant.character.escape {
+  color: #56b6c2;
+}
+.constant.numeric {
+  color: #d19a66;
+}
+.constant.other.color {
+  color: #56b6c2;
+}
+.constant.other.symbol {
+  color: #56b6c2;
+}
+.variable {
+  color: #e06c75;
+}
+.variable.interpolation {
+  color: #be5046;
+}
+.variable.parameter {
+  color: #abb2bf;
+}
+.invalid.illegal {
+  background-color: #e06c75;
+  color: #282c34;
+}
+.string {
+  color: #98c379;
+}
+.string.regexp {
+  color: #56b6c2;
+}
+.string.regexp .source.ruby.embedded {
+  color: #e5c07b;
+}
+.string.other.link {
+  color: #e06c75;
+}
+.punctuation.definition.comment {
+  color: #5c6370;
+}
+.punctuation.definition.method-parameters,
+.punctuation.definition.function-parameters,
+.punctuation.definition.parameters,
+.punctuation.definition.separator,
+.punctuation.definition.seperator,
+.punctuation.definition.array {
+  color: #abb2bf;
+}
+.punctuation.definition.heading,
+.punctuation.definition.identity {
+  color: #61afef;
+}
+.punctuation.definition.bold {
+  color: #e5c07b;
+  font-weight: bold;
+}
+.punctuation.definition.italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.punctuation.section.embedded {
+  color: #be5046;
+}
+.punctuation.section.method,
+.punctuation.section.class,
+.punctuation.section.inner-class {
+  color: #abb2bf;
+}
+.support.class {
+  color: #e5c07b;
+}
+.support.function {
+  color: #56b6c2;
+}
+.support.function.any-method {
+  color: #61afef;
+}
+.entity.name.function {
+  color: #61afef;
+}
+.entity.name.class,
+.entity.name.type.class {
+  color: #e5c07b;
+}
+.entity.name.section {
+  color: #61afef;
+}
+.entity.name.tag {
+  color: #e06c75;
+}
+.entity.other.attribute-name {
+  color: #d19a66;
+}
+.entity.other.attribute-name.id {
+  color: #61afef;
+}
+.meta.class {
+  color: #e5c07b;
+}
+.meta.class.body {
+  color: #abb2bf;
+}
+.meta.method-call,
+.meta.method {
+  color: #abb2bf;
+}
+.meta.definition.variable {
+  color: #e06c75;
+}
+.meta.link {
+  color: #d19a66;
+}
+.meta.require {
+  color: #61afef;
+}
+.meta.selector {
+  color: #c678dd;
+}
+.meta.separator {
+  background-color: #373b41;
+  color: #abb2bf;
+}
+.meta.tag {
+  color: #abb2bf;
+}
+.none {
+  color: #abb2bf;
+}
+.markup.bold {
+  color: #d19a66;
+  font-weight: bold;
+}
+.markup.changed {
+  color: #c678dd;
+}
+.markup.deleted {
+  color: #e06c75;
+}
+.markup.italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.markup.heading .punctuation.definition.heading {
+  color: #61afef;
+}
+.markup.inserted {
+  color: #98c379;
+}
+.markup.list {
+  color: #e06c75;
+}
+.markup.quote {
+  color: #d19a66;
+}
+.markup.raw.inline {
+  color: #98c379;
+}
+.source.cs .keyword.operator {
+  color: #c678dd;
+}
+.source.css .property-name,
+.source.css .property-value {
+  color: #828997;
+}
+.source.css .property-name.support,
+.source.css .property-value.support {
+  color: #abb2bf;
+}
+.source.gfm .markup {
+  -webkit-font-smoothing: auto;
+}
+.source.gfm .markup.heading {
+  color: #e06c75;
+}
+.source.gfm .markup.link {
+  color: #c678dd;
+}
+.source.gfm .link .entity {
+  color: #61afef;
+}
+.source.ini .keyword.other.definition.ini {
+  color: #e06c75;
+}
+.source.java .storage.modifier.import {
+  color: #e5c07b;
+}
+.source.java .storage.type {
+  color: #e5c07b;
+}
+.source.java-properties .meta.key-pair {
+  color: #e06c75;
+}
+.source.java-properties .meta.key-pair > .punctuation {
+  color: #abb2bf;
+}
+.source.json .meta.structure.dictionary.json > .string.quoted.json {
+  color: #e06c75;
+}
+.source.json .meta.structure.dictionary.json > .string.quoted.json > .punctuation.string {
+  color: #e06c75;
+}
+.source.json .meta.structure.dictionary.json > .value.json > .string.quoted.json,
+.source.json .meta.structure.array.json > .value.json > .string.quoted.json,
+.source.json .meta.structure.dictionary.json > .value.json > .string.quoted.json > .punctuation,
+.source.json .meta.structure.array.json > .value.json > .string.quoted.json > .punctuation {
+  color: #98c379;
+}
+.source.json .meta.structure.dictionary.json > .constant.language.json,
+.source.json .meta.structure.array.json > .constant.language.json {
+  color: #56b6c2;
+}
+.source.ruby .constant.other.symbol > .punctuation {
+  color: inherit;
+}
+.source.python .keyword.operator.logical.python {
+  color: #c678dd;
+}
+.source.python .variable.parameter {
+  color: #d19a66;
+}
+</style>
+  </head>
+  <body class='markdown-preview'><h1 id="healthcare-link-">Healthcare Link 用户手册</h1>
+<h2 id="-">临床研究数据捕获/采集/获取</h2>
+<h2 id="-">简介</h2>
+<p>  Healthcare Link 是CDISC发起的一个项目，总体目标是只采集一次数据(以某种能够满足多个下游应用系统需求的行业标准格式，同时也能够提高数据质量和
+    患者安全)，让医生、医疗机构更方便地参与到临床研究中来。</p>
+<p>Healthcare link在技术方面的进展主要来自于CDISC 和IHE组织的合作。Healthcare Link项目想要为医疗机构的临床研究参与人员打造
+一个从方案可行性、报表到提交整个过程的一体式/整合式系统。该用户手册实现了其中一个目标：临床研究数据在医疗机构中的捕获/采集/获取。</p>
+<p>当前研究数据获取的状态如图一所示。尽管有了一些进展，医疗机构内研究数据的采集仍然还是通过一堆乱七八糟的文本，各种EDC系统来收集的。同时EHR
+电子病历系统是整个医疗流程自动化过程中的核心系统。为了研究而采集的大多数数据已经包含在EHR之内，这些数据与研究用的文本或EDC系统中的数据是重复的。
+Healthcare Link中将EHR作为医护人员使用的唯一界面，通过支持与在数据采集临床试验自动化和数据管理中发挥重要作用的EDC系统之间自动化的工作流程提供一个一体式的系统。</p>
+<p><img src="/Users/edwin/Documents/workfolder/workspace/cdisc-standard/zh-cn/healthcare link/user-guide-figure1.png" alt=""></p>
+<p>CDISC与IHE 质量、研究和公共卫生域紧密配合形成了一些集成规范用于实现互操作性。这些Healthcare Link规范的开发遵循以下原则：</p>
+<ul>
+<li>临床研究的话采用CDISC标准，医疗采用HL7</li>
+<li>临床研究自动化采用EDC系统，医疗流程自动化采用EHR</li>
+<li>考虑了医疗和研究两方面各自的法律法规，研究方面遵循21 CFR Part11，医疗方面遵循HIPPA</li>
+<li>着眼于医疗机构的需求，将临床研究的工作流程集成到EHR系统当中去</li>
+<li>开发一种集成的方式使得在保留和扩展EDC系统作用的前提下，EHR系统能够易于支持临床研究</li>
+</ul>
+<p>不同于诸如EHR或EDC的单系统解决方案，Healthcare Link从定义上、设计上就是一个多系统的解决方案。两个或以上的系统间集成要求规范中解决每个系统的角色，定义好每个系统执行的步骤。
+因此，用户手册从不同的角度来考虑以调整每个系统所发挥的互补作用。</p>
+<p>假定在IHE集成规范中都规定了Healthcare Link中的每个子系统的角色。这些IHE规范(RFD CRD等)描述了要有哪些角色，每个系统要执行的交易/事务。在Healthcare Link的
+解决方案中至少有三个独立的系统参与其中：一个EHR系统，一个EDC系统和一个归档库。在某个具体应用中，要支持某个临床研究，可能会涉及多个EHR系统，但通常只涉及一个EDC系统和一个归档库。
+反之，一个医疗机构只有一个EHR系统，要完成不同赞助方的多个研究的话可能会与多个不同的EDC系统发生交互。</p>
+<h2 id="-">范围</h2>
+<p>该手册的目的不在于取代实施这些规范来构建一个Healthcare Link解决方案中的技术细节，而是给出一些所涉及到的系统:EHR、EDC和归档系统应如何approach an implementation的额外信息
+IHE 集成规范阐述了如何实现EHR和EDC系统间的互联互通。相关规范请参考<a href="http://www.cdisc.org/system/files/all/standard_category/application/pdf/cdisc_healthcare_link_p rofiles.pdf.">cdisc_healthcare_link_p rofiles</a></p>
+<p>这些IHE 规范中同时包含了问题域和技术信息。Volume 1第一卷适合非技术人员，包含了一个实施前后状态的用例场景的文本描述。Volume 2&amp;3 第2、3卷是技术文档，技术人员如何才
+能够构建这样一个跨系统的互联互通的解决方案。打算实施的人员应该通读整个规范。该用户手册将不再赘述规范中的系统角色和交易/事务规范，但将更详细地讨论所涉及的系统如何完成这样的
+任务，以及使用Healthca Link开展这样一个项目需要哪些工作。</p>
+<p>在如下两个IHE 规范中定义了EHR 和EDC 系统间事务：数据采集的检索表单RFD——介绍了一些表单；临床研究文档——用EHR中的数据填充表单。Healthcare link项目的工作成果还包含其他规范，但RFD和CRD是核心部分，也是最成熟和最可实施的部分。RFD和CRD一起使用能够让EHR系统用户获得预先就填充了一部分值的eCRF，可以在EHR的系统界面中完成整个表单的填写。但由于eCRF是在研究方案执行过程当中才能完成，RFD和CRD就必须进行一些与方案相关的配置。这类配置可以使用新的规范诸如RPE执行的检索流程来自动化地完成，但在此类新规范能够实施之前，用户手册中会提供详细的配置信息(参考下面的系统角色)。</p>
+<p>RFD单独就可以实施，而CRD只是定义表单预赋值的内容，无法脱离RFD单独实施。作为早期的RFD实施人员，Nextrial&#39;s Robert Barr在解释即使不预先对表单进行填充的情况下实施RFD的价值时这样说道：
+“在给实际的客户和合作厂商演示RFD规范的时候，多次使用RFD规范而未预先填充。RFD规范的灵活性使得我们拥有构建一个轻量级系统的选择，这样客户就可以用作一些特殊表单的简单直接的入口。他们可能并没有预先填充，但仍然能够在正确的时间和地点在界面中看到表单。能够利用已有的规范和调用，直接访问我们的的表单而无需通过登录查找一整套过程才能获得某一个表单”</p>
+<p>这样，RFD自身就能够简化医疗机构数据录入的工作流程，但如果能够预先填充的话，能够获得更多的好处，也就是CRD所能够提供的功能，这也是本手册关注的重点。</p>
+<h2 id="rfd-crd-">RFD和CRD的功能描述</h2>
+<p>一旦实施了RDF和CRD，就为EHR和EDC系统建立了一座桥梁。EHR和EDC系统如同图2中两个人进行通话一样，演示了RFD的第一种事务/交易。EHR系统发起一个会话，向EDC系统请求适当的表单。请求当中也包含了一些用于自动填充的数据元。EDC把EHR发送过来的数据映射到表单中，并将部分填充的表单以响应的方式返回给EHR系统。整体来看，请求/响应就构成了RFD中的“R检索”环节。</p>
+<p><img src="/Users/edwin/Documents/workfolder/workspace/cdisc-standard/zh-cn/healthcare link/user-guide-figure2.png" alt=""></p>
+<p>如图3所示，整个会话过程继续，EHR系统在自己的用户界面中展示拿到的预先填充了一部分的表单，整个预先填充的步骤并不是要完成表单中所有部分的填充，只是给研究协调员study coordinator起个头，同时避免重复录入已经在患者病历中存在的数据。CRF中要求的其他数据则必须由EHR系统用户来输入。表单基本上是不会变的，和EDC系统中展示的一模一样，但会对输入的数据进行一些控制。换句话说，表单会找到一些异常情况诸如超过范围的值，人口统计学信息和症状之间的不匹配如怀孕的男人等。</p>
+<p><img src="/Users/edwin/Documents/workfolder/workspace/cdisc-standard/zh-cn/healthcare link/user-guide-figure3.png" alt=""></p>
+<p>EHR系统并不一定要存储在研究过程中收集的数据。标准中对此没有做出规定，但通常而言，EHR系统让EDC来控制和包含与研究相关的所有数据项，而EHR自己只关注与患者诊疗相关的数据项。CRF位于EHR系统的用户界面，但是是与EDC相连接。这样的话，在EHR系统的工作流程之中，表单就像是针对研究的一个孤岛，EHR与它是相互独立的。</p>
+<p>在填充完了表单之后，把数据交给EDC，然后再交给归档库。最后一步是EDC系统确认收到了已填充完的表单。</p>
+<p>整个会话过程就完成了一份CRF，整个过程既有EDC所设计的数据采集的表单，又有在EHR系统用户界面中功能集成的便利性。</p>
+<p>图4种展示了更加详细的技术层面的会话过程。一方面展示了EHR和EDC系统间的交互，另一方面展示了要完成交互EHR和EDC所需要的独立动作。图4中并没有包含归档的步骤。完整的交互行为请参考RFD和CRD规范文档本身。</p>
+<p><img src="/Users/edwin/Documents/workfolder/workspace/cdisc-standard/zh-cn/healthcare link/user-guide-figure4.png" alt=""></p>
+<h2 id="healthcare-link-">Healthcare Link的应用</h2>
+<p>在临床研究的层面上，Healthcare Link的实施基本上和一般的数据采集系统和流程的实施无异，但会简化数据采集的流程和医疗机构的工作流程。关键的考虑因素有：</p>
+<ul>
+<li>选择数据采集的工具</li>
+<li>确定角色和流程</li>
+<li>保证遵循相应SOP中的法律法规</li>
+</ul>
+<h3 id="-healthcare-link-capable-">选择Healthcare Link Capable系统</h3>
+<p>如前所述，Healthcare Link数据采集需要三个核心系统：EDC,EHR,和归档库。很多进行临床研究的机构已经有了EDC系统，或者会选择众多商用软件之一。一些EDC系统已经实现了IHE规范。涉及临床研究的医疗机构很可能会有不同的EHR系统，因此罗列出在某个临床研究中会碰到的EHR系统的列表是需要考虑的。</p>
+<p>选择的系统必须满足RFD和CRD中指定角色的要求，包括参与机构间收发的事务。对于涉及新的EDC和EHR系统组合的实施而言，所选择的系统间事务的测试应该作为开发过程的一部分。IHE在欧洲和北美每年都举办Connectathons，为实施规范的系统的测试提供了机会。更多有关Connectathons的信息请参考<a href="http://www.ihe.net/connectathon/.&#x5BF9;&#x4E8E;&#x90A3;&#x4E9B;&#x5DF2;&#x7ECF;&#x5728;&#x751F;&#x4EA7;&#x73AF;&#x8282;&#x4E2D;&#x5E94;&#x7528;&#x4E86;&#x89C4;&#x8303;&#x7684;EDC&#x548C;EHR&#x7CFB;&#x7EDF;&#x8FDB;&#x884C;&#x7684;&#x7814;&#x7A76;&#x800C;&#x8A00;&#xFF0C;&#x91CD;&#x70B9;&#x5219;&#x5728;&#x4E8E;&#x4E0E;&#x7814;&#x7A76;&#x76F8;&#x5173;&#x7684;&#x914D;&#x7F6E;&#x3002;&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;&#x6BCF;&#x4E2A;&#x4F9B;&#x5E94;&#x5546;&#x90FD;&#x8981;&#x505A;&#x597D;&#x5C06;&#x6D4B;&#x8BD5;&#x7CFB;&#x7EDF;&#x7D27;&#x6025;&#x6539;&#x9020;&#x6210;&#x751F;&#x4EA7;&#x7CFB;&#x7EDF;&#x7684;&#x51C6;&#x5907;&#x3002;">http://www.ihe.net/connectathon/.对于那些已经在生产环节中应用了规范的EDC和EHR系统进行的研究而言，重点则在于与研究相关的配置。除此之外，每个供应商都要做好将测试系统紧急改造成生产系统的准备。</a></p>
+<h3 id="-">实施——系统和角色</h3>
+<p>某个研究规范的healthcare link方法的实施有三类角色：一个EDC系统、一到多个EHR系统，一到多个归档系统。</p>
+<h4 id="edc-">EDC系统角色</h4>
+<p>正如<a href="http://www.fda.gov/downloads/Drugs/GuidanceComplianceRegulatoryInformation/Guida nces/UCM328691.pdf">FDA eSource指南</a>中所述一样，&quot;eCRF是用来收集来自电子化或纸质系统中所有数据的工具，并且以一种满足研究设计的方式采集和管理这些数据。&quot;Healthcare Link中EDC系统的角色在于提供eCRF，EHR系统作为主要的数据源，取代了纸质的“源”文档。eSource指南中要求数据源包含“能够从EHR系统中传输完整准确的数据到eCRF中的软件的能力”此类信息，以供人详览。实现了RFD CRD两大IHE 规范的Healthcare Link能够提供如何妥善地将数据从EHR传输到eCRF的成熟的技术框架和详细信息</p>
+<p>要完成Healthcare Link的实施，所选择的EDC系统在针对研究的配置中起到十分重要的作用。需要考虑的EDC系统角色包括：</p>
+<ul>
+<li>1、确保EDC系统兼容最新的RFD和CRD标准，以及CDISC ODM和CDASH        </li>
+<li>2、评估RPE( Retrieve Process for Execution)标准的兼容性         </li>
+<li>3、与合作机构一起                  <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span>&nbsp;&nbsp;</span><span class="meta paragraph text"><span>a.&nbsp;确定合作机构的具有兼容性的EHR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>&nbsp;&nbsp;b.&nbsp;保证EHR的版本是能够兼容RFD的&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span></div></pre></li>
+<li>4、就研究相关配置与合作机构/EHR供应商一起         <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span>&nbsp;&nbsp;</span><span class="meta paragraph text"><span>a.&nbsp;在EHR配置项中添加每个CRD所要求的study&nbsp;ID’s,&nbsp;Site&nbsp;ID,&nbsp;Investigator&nbsp;ID和endpoints&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>&nbsp;&nbsp;b.&nbsp;在EHR配置项中添加study&nbsp;archive&nbsp;endpoints&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>&nbsp;&nbsp;c.&nbsp;核实EHR中实现了诸如enrollment注册等功能&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>&nbsp;&nbsp;d.&nbsp;核实EHR和EDC系统间的安全相关配置&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span></div></pre></li>
+<li>5、利用CRD定义CRF的设计和CRF中的字段映射<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span>&nbsp;&nbsp;</span><span class="meta paragraph text"><span>a.&nbsp;由site/EHR来核实字段映射，按需调整&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span></div></pre></li>
+<li>6、由EDC系统所在site评估相应的安全配置<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span>&nbsp;&nbsp;</span><span class="meta paragraph text"><span>a.&nbsp;用户安全</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>i.&nbsp;SAML&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;</span><span class="meta paragraph text"><span>b.&nbsp;Site安全&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>i.&nbsp;证书&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii.事先共享的ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;</span><span class="meta paragraph text"><span>c.&nbsp;事务审计日志&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>&nbsp;&nbsp;i.&nbsp;基于安全方面的考虑因素，可能会需要配置一个审计库&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span></div></pre></li>
+<li>7、site上线      <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span>&nbsp;&nbsp;</span><span class="meta paragraph text"><span>a.&nbsp;CRF映射的用户接受度测试&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>&nbsp;&nbsp;b.&nbsp;连接性测试</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>&nbsp;&nbsp;c.&nbsp;安全确认&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>&nbsp;&nbsp;d.&nbsp;用户培训&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span></div></pre></li>
+</ul>
+<h4 id="ehr-">EHR系统角色</h4>
+<p>Healthcare Link的主要功能是讲临床研究的活动转移到EHR系统界面中来。对于大多数site，EHR是所有原始患者数据的中心库。一些诸如研究方案制定的评估如来自中央实验室的数据可能既存在EHR中，也录入到了eCRF中。 be compiled separately for study purposes。对于EHR功能更加全面的Site而言，所有诸如此类的外部数据也会路由到EHR中。EHR系统中整合的数据越多，CRD就能够在EDC系统中为eCRF填充更多的字段值，只有那些真正的知识针对某个实验设计的评估项才会通过RFD由EHR系统界面来录入。</p>
+<p>由于EHR 本身就是site日常运营的一部分，在某个研究设计中就没有多大可能性可以选择哪个EHR系统。大多数进行临床研究的site也没有修改自己EHR系统的能力。鉴于此，RFD和CRD的设计人员意识到临床研究的支持并不是医疗业务系统的核心功能，已经考虑到了减少EHR端的工作量。因此，大多数情况下，工作量都是丢给EDC系统的。在Healthcare Link实施过程中只有少数几步需要EHR系统的参与。</p>
+<ul>
+<li>1、EHR系统必须记录CRD中所定义的某个研究设计所涉及的患者的一些fact 数据 ，以及EDC系统中所要求的一些针对这个研究的特殊需求。可能需要每天采集和手工录入这类Enrollment content 信息<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span>&nbsp;&nbsp;</span><span class="meta paragraph text"><span>a.&nbsp;Subject&nbsp;identifier&nbsp;研究对象标识</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>&nbsp;&nbsp;b.&nbsp;Study&nbsp;identifier</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>&nbsp;&nbsp;c.&nbsp;Form&nbsp;identifier</span></span></span></div></pre></li>
+<li>2、对于Retrieve Form request，EHR系统必须配置好EDC endpoint</li>
+<li>3、EHR可能需要为归档库配置endpoint<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span>&nbsp;&nbsp;</span><span class="meta paragraph text"><span>a.&nbsp;在检索表单请求时应发送的记录整个事务的内容(To&nbsp;be&nbsp;sent&nbsp;during&nbsp;the&nbsp;Retrieve&nbsp;Form&nbsp;request&nbsp;to&nbsp;document&nbsp;the&nbsp;transaction.)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>&nbsp;&nbsp;b.&nbsp;作为源文档来提供患者数据的副本(To&nbsp;provide&nbsp;a&nbsp;copy&nbsp;of&nbsp;the&nbsp;patient&nbsp;data&nbsp;as&nbsp;source&nbsp;documents)</span></span></span></div></pre></li>
+<li>4、EHR系统要为调用eCRF提供一种触发机制，必须知道表单的标识<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span>&nbsp;&nbsp;</span><span class="meta paragraph text"><span>a.&nbsp;这种触发机制最好是针对具体的患者，这样子就能够将EHR中患者的标识符映射到CRD的变量中去</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>i.&nbsp;表单标识</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii.Subject&nbsp;identifier&nbsp;研究对象标识</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iii.Study&nbsp;identifier</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iv.Possibly&nbsp;Investigator&nbsp;identifier和其他CRD&nbsp;parameters</span></span></span></div></pre></li>
+<li>5、EHR必须按需生成一个满足CRD标准的可导出文档<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span>&nbsp;&nbsp;</span><span class="meta paragraph text"><span>a.&nbsp;如同CRD和RFD所要求的，将该部分内容包括在检索表单请求之中。</span></span></span></div></pre></li>
+<li>6、如果安全分析需要的话，EHR系统应在检索表单请求之前提交源文档</li>
+</ul>
+<h4 id="-">归档库</h4>
+<p>归档库相当于临床研究的黑盒子，作用在于收集和存储eSource文档。归档库通过采集两类文档实现了电子化的源文档记录(enable electronic source documentation)。第一类是EHR导出的预先赋好值的CCD文档，其中记录了预先要赋值的数据字段的数据源。由于此类文档包含了可标识的患者健康信息，归档库必须位于site的范围之内。第二类文档，也就是完整的表单实例，显示了预先赋值的数据字段在完整的表单中是如何展现的。第二类文档是提交给EDC系统的完整eCRF的完全拷贝。通过比较EHR导出的文档和提交的eCRF文档，可以推断出数据的出处。</p>
+<p>归档库的设计是专门为了满足21 CRF11和<a href="http://www.fda.gov/downloads/Drugs/GuidanceComplianceRegulatoryInformation/Guida nces/UCM328691.pdf">FDA eSource指南</a>中对源文档的要求。</p>
+<p>归档库的核心功能包括：</p>
+<ul>
+<li>1、确定它所接收的数据的上报来源</li>
+<li>2、能够接收所有数据字段</li>
+<li>3、保证如何都不会更改它所接收到的数据内容</li>
+<li>4、将单个表单实例中的所有数据字段关联起来</li>
+<li>5、构建所有数据字段以及它们与某个唯一的待提交表单之间关联的可靠的持久化副本，</li>
+<li>6、绝不允许任何人以任何方式修改接收到的数据</li>
+<li>7、提供一种外部系统能够根据某些查询条件查看或下载数据副本的机制</li>
+</ul>
+<p>标准中规定这些功能对于source documentation 是必须的，但并没有说明这些功能要如何组合。这种开放式的方法使得归档库开发人员拥有充分的自由来差异化各自的产品。一个全功能的归档库能够支持异地的源文档/数据确认，避免了或减少了现场确认的必要性。</p>
+<h5 id="compliance">Compliance</h5>
+<p>在某个临床研究中使用EDC的操作流程和实践已经很成熟，我们假定在Healthcare Link实施中选择的任意一款EDC系统都能满足如下的常见需求：</p>
+<ul>
+<li>在Clinical Investigations中使用的计算机系统</li>
+<li>软件校验的基本原则</li>
+<li>21 CFR Part 11, 电子化记录和电子签名</li>
+</ul>
+<p>与EHR系统的额外交互的确引入了一些隐私相关的考虑因素，电子化格式的source study data也不像EDC系统那样受FDA要求所约束。从定义上来说，EHR就是一个包括了受保护的医疗健康信息的系统(这里PHI参考了HIPPA)，必然和不被研究指南覆盖(cannot be covered under research guidances)的药房和收费等系统相连接.Healthcare Link仔细地定义了EHR的范围，为了解决这些额外考虑因素所引起的问题，提供了适当的文档和流程。</p>
+<h5 id="privacy-">privacy 隐私</h5>
+<p>临床研究数据很重要的一点是科研数据库(EDC)中的研究对象数据必须打码处理，而EHR中的数据不仅仅包括个人的健康数据，也关联了保险和财务记录，任何未经授权泄露这些数据都要处罚。隐私的要求引发了一些出于研究目的而对EHR数据访问的顾虑。然而，通过Healthcare Link，在研究中用到的数据不会违法任何隐私方面的要求。通过RFD，由EDC来定义和控制数据字段，通过CRD来提取要赋值的数据。由于除了研究所需的和一些惯用数据之外，研究行为并不会包括一些个人的可标识数据，因此并不会提高个人隐私的风险。</p>
+<p>研究对象的隐私是通过化名的方式来提供的，通过study identifier研究标识符与EHR中的患者标识而非研究系统EDC相关联。所有Healthcare Link事务都只使用subject identifier，这样子防止了不当的患者识别。只有EHR才能同时得到subject identifier和患者标识符。如果是出于研究对象安全的考虑，EHR可以破例，根据“安全高于隐私”的原则，识别出研究对象的患者标识。</p>
+<p>未经授权的系统入侵的隐私问题则留给单个系统来处理。抛开Healthcare Link，EHR系统本身应该有保护措施来应对自身的数据隐私需求。由于系统和技术在不断演化，Healthcare Link并没有定义说怎么样才算一个安全的系统。作为任何跨组织活动的预备工作，都应进行安全因素风险分析Security Considerations Risk Analysis 。资产、威胁和风险消减的详细情况将决定是否使用证书、TLS，SAML，以及系统间通信的审计日志。</p>
+<h3 id="supporters">Supporters</h3>
+<h4 id="cdisc-">CDISC 的作用</h4>
+<p>作为Healthcare Link项目的发起方，CDISC负责将基于EHR的临床研究变成实际产品。CDISC与IHE的质量、研究和公共卫生域持续合作，引入了新的规范，并通过IHE的测试流程和变更提议对异构的规范不断完善。CDISC和IHE一道控制Healthcare Link规范构建的进度和方向。
+在更加基础的层面上，CDISC提供的核心标准是IHE 科研/研究相关的实施/实现的基础。所有IHE规范都基于已有的核心标准，诸如CDISC的ODM和CDASH以及HL7 的CDA。因此，随着Healthcare Link的烟花，CDISC标准也将成为EHR数据二次利用的标准。</p>
+<p>除了与IHE一道的直接性的开发角色之外，CDISC负责更多的诸如Healthcare Link价值的推广和实现。这些过程包括：</p>
+<ul>
+<li>行业宣传：CDISC通过培训和宣传，促进Healthcare Link的应用</li>
+<li>牵线搭桥：由于Hleathcare Link要求不同的EHR、EDC、site和研究的赞助商之间合作，CDISC负责协调来促进应用</li>
+<li>Regulatory advocacy:CDISC已经将Healthcare Link展示给FDA和其他政府机构。来自FDA的意见已经通过变更提案流程整合到IHE研究相关的规范中。</li>
+</ul>
+<h4 id="ihe-">IHE的作用</h4>
+<p>IHE 在Healthcare Link中的作用正如下面IHE Radiology User’s Handbook中所述的一样。</p>
+<blockquote>
+<p>IHE是由医疗从业人员好软件供应商所发起的组织，旨在改善信息系统交互的方式来支持医疗服务。IHE使用成熟的数据标准来定义集成规范，实现系统的互联互通和高效的工作流程。IHE使得电子病历领域要求的集成成为了可能。每个IHE集成规范描述了一个系统集成的需求和一个对应的解决方案。其中，基于诸如HL7 CDISC等标准，定义了称之为IHE actor的功能组件，规定了每个actor必须执行的事务的具体信息。</p>
+</blockquote>
+<p>除了开发集成规范之外，IHE提供了一种途径，软件供应商可以在欧洲和北美举办的年度Connectathon上对规范进行测试。RFD规范已经经过大范围的测试，
+已经成为最终版。CRD只经过很少的测试，目前还处于试行版。</p>
+<p>也许IHE对于临床研究的社区最大的价值在于联系EHR和公共卫生领域中想要进行合作的人员。RFD和其他Healthcare Link规范是由众多活跃的参与人员开发而成，RFD已经引起了除了研究领域之外的，特别是公共卫生和质量上报领域的人们的兴趣。IHE开放式的流程和对工作成
+果的不断演化为以后的开发提供了一片土壤，这些工作成果的使用者，尤其是那些早期的使用者，不应将这些规范视为最终产品，而是看做未完成的状态。</p>
+<h3 id="-">总结</h3>
+<p>该用户手册是对面向临床研究的数据采集的Healthcare Link概念的概述。无论如何该手册都不能替代另外2个能够实现临床研究数据采集的IHE规范：RFD和CRD。任何真正感兴趣的人都应该阅读实际的规范，CDISC标准，以及对实施这些规范所要求的合作的考虑。CDISC愿意通过培训、前线和标准宣传来帮助潜在的实施人员来启动，同时也会通过授权的CDISC培训来提供Healthcare Link的课程。</p>
+<h3 id="-">词汇说明</h3>
+<p>data capture 数据采集
+Transaction ；事务、交易
+site：医疗机构、研究机构
+Retrieve Form request：检索表单请求
+source document 源文档
+source documentation  源文档记录
+source study data 源研究数据
+Security Considerations Risk Analysis 安全因素风险分析</p>
+<p>EHR-enabled research</p>
+<p>change proposal process</p></body>
+</html>

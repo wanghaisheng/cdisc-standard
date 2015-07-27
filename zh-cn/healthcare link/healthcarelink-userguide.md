@@ -1,7 +1,10 @@
 # Healthcare Link 用户手册
+
 ## 临床研究数据捕获/采集/获取
+
 ## 简介
-Healthcare Link 是CDISC发起的一个项目，总体目标是只采集一次数据(以某种能够满足多个下游应用系统需求的行业标准格式，同时也能够提高数据质量和
+
+  Healthcare Link 是CDISC发起的一个项目，总体目标是只采集一次数据(以某种能够满足多个下游应用系统需求的行业标准格式，同时也能够提高数据质量和
     患者安全)，让医生、医疗机构更方便地参与到临床研究中来。
 
 Healthcare link在技术方面的进展主要来自于CDISC 和IHE组织的合作。Healthcare Link项目想要为医疗机构的临床研究参与人员打造
@@ -45,7 +48,7 @@ RFD单独就可以实施，而CRD只是定义表单预赋值的内容，无法�
 
 ## RFD和CRD的功能描述
 
-一旦实施了RDF和CRD，就为EHR和EDC系统建立了一座桥梁。EHR和EDC系统如同图2中两个人进行通话一样，演示了RFD的第一种事务/交易。EHR系统发起一个会话，向EDC系统请求适当的表单。请求当中也包含了一些用于自动填充的数据元。EDC把EHR发送过来的数据映射到表单中，并将部分填充的表单以响应的方式返回给EHR系统。整体来看，请求/响应就构成了RFD中的“R检索”环节。
+一旦实施了RFD和CRD，就为EHR和EDC系统建立了一座桥梁。EHR和EDC系统如同图2中两个人进行通话一样，演示了RFD的第一种事务/交易。EHR系统发起一个会话，向EDC系统请求适当的表单。请求当中也包含了一些用于自动填充的数据元。EDC把EHR发送过来的数据映射到表单中，并将部分填充的表单以响应的方式返回给EHR系统。整体来看，请求/响应就构成了RFD中的“R检索”环节。
 
 ![](user-guide-figure2.png)
 
@@ -87,33 +90,33 @@ EHR系统并不一定要存储在研究过程中收集的数据。标准中对�
 正如[FDA eSource指南](http://www.fda.gov/downloads/Drugs/GuidanceComplianceRegulatoryInformation/Guida nces/UCM328691.pdf)中所述一样，"eCRF是用来收集来自电子化或纸质系统中所有数据的工具，并且以一种满足研究设计的方式采集和管理这些数据。"Healthcare Link中EDC系统的角色在于提供eCRF，EHR系统作为主要的数据源，取代了纸质的“源”文档。eSource指南中要求数据源包含“能够从EHR系统中传输完整准确的数据到eCRF中的软件的能力”此类信息，以供人详览。实现了RFD CRD两大IHE 规范的Healthcare Link能够提供如何妥善地将数据从EHR传输到eCRF的成熟的技术框架和详细信息
 
 要完成Healthcare Link的实施，所选择的EDC系统在针对研究的配置中起到十分重要的作用。需要考虑的EDC系统角色包括：
-
-* 1、确保EDC系统兼容最新的RFD和CRD标准，以及CDISC ODM和CDASH
-* 2、评估RPE( Retrieve Process for Execution)标准的兼容性
-* 3、与合作机构一起
-		a. 确定合作机构的具有兼容性的EHR
-		b. 保证EHR的版本是能够兼容RFD的
-* 4、就研究相关配置与合作机构/EHR供应商一起
-		a. 在EHR配置项中添加每个CRD所要求的study ID’s, Site ID, Investigator ID和endpoints
-		b. 在EHR配置项中添加study archive endpoints 
-		c. 核实EHR中实现了诸如enrollment注册等功能 
-		d. 核实EHR和EDC系统间的安全相关配置
+         
+* 1、确保EDC系统兼容最新的RFD和CRD标准，以及CDISC ODM和CDASH        
+* 2、评估RPE( Retrieve Process for Execution)标准的兼容性         
+* 3、与合作机构一起                  
+		a. 确定合作机构的具有兼容性的EHR      
+		b. 保证EHR的版本是能够兼容RFD的      
+* 4、就研究相关配置与合作机构/EHR供应商一起         
+		a. 在EHR配置项中添加每个CRD所要求的study ID’s, Site ID, Investigator ID和endpoints     
+		b. 在EHR配置项中添加study archive endpoints       
+		c. 核实EHR中实现了诸如enrollment注册等功能       
+		d. 核实EHR和EDC系统间的安全相关配置         
 * 5、利用CRD定义CRF的设计和CRF中的字段映射
-		a. 由site/EHR来核实字段映射，按需调整
+		a. 由site/EHR来核实字段映射，按需调整           
 * 6、由EDC系统所在site评估相应的安全配置
 		a. 用户安全
-			i. SAML
-		b. Site安全
-			i. 证书
-			ii.事先共享的ID
-		c. 事务审计日志
-		i. 基于安全方面的考虑因素，可能会需要配置一个审计库
-* 7、site上线
-		a. CRF映射的用户接受度测试
+			i. SAML          
+		b. Site安全      
+			i. 证书       
+			ii.事先共享的ID        
+		c. 事务审计日志         
+		i. 基于安全方面的考虑因素，可能会需要配置一个审计库         
+* 7、site上线      
+		a. CRF映射的用户接受度测试       
 		b. 连接性测试
-		c. 安全确认
-		d. 用户培训
-
+		c. 安全确认               
+		d. 用户培训          
+                 
 #### EHR系统角色
 Healthcare Link的主要功能是讲临床研究的活动转移到EHR系统界面中来。对于大多数site，EHR是所有原始患者数据的中心库。一些诸如研究方案制定的评估如来自中央实验室的数据可能既存在EHR中，也录入到了eCRF中。 be compiled separately for study purposes。对于EHR功能更加全面的Site而言，所有诸如此类的外部数据也会路由到EHR中。EHR系统中整合的数据越多，CRD就能够在EDC系统中为eCRF填充更多的字段值，只有那些真正的知识针对某个实验设计的评估项才会通过RFD由EHR系统界面来录入。
 
@@ -201,10 +204,13 @@ IHE 在Healthcare Link中的作用正如下面IHE Radiology User’s Handbook中
 
 >IHE是由医疗从业人员好软件供应商所发起的组织，旨在改善信息系统交互的方式来支持医疗服务。IHE使用成熟的数据标准来定义集成规范，实现系统的互联互通和高效的工作流程。IHE使得电子病历领域要求的集成成为了可能。每个IHE集成规范描述了一个系统集成的需求和一个对应的解决方案。其中，基于诸如HL7 CDISC等标准，定义了称之为IHE actor的功能组件，规定了每个actor必须执行的事务的具体信息。
 
+译者注：'IHE 最简单理解就是个行业协会 靠规范X光和影像相关的系统集成的流程起的家  逐渐扩展到医疗信息化的边边角角 试图规范医疗信息系统集成时的各种工作流程，口号是“咱不造新标准，咱使用的都是业界已经存在的各式各样的标准 我们只是组装打包“'
 
-除了开发集成规范之外，IHE提供了一种途径，软件供应商可以在欧洲和北美举办的年度Connectathon上对规范进行测试。RFD规范已经经过大范围的测试，已经成为最终版。CRD只有很少的测试，目前还处于试行版。
+除了开发集成规范之外，IHE提供了一种途径，软件供应商可以在欧洲和北美举办的年度Connectathon上对规范进行测试。RFD规范已经经过大范围的测试，
+已经成为最终版。CRD只经过很少的测试，目前还处于试行版。
 
-也许IHE对于临床研究的社区最大的价值在于联系EHR和公共卫生领域中想要进行合作的人员。RFD和其他Healthcare Link规范是由众多活跃的参与人员开发而成，RFD已经引起了除了研究领域之外的，特别是公共卫生和质量上报领域的人们的兴趣。IHE开放式的流程和对工作成果的不断演化为以后的开发提供了一片土壤，这些工作成果的使用者，尤其是那些早期的使用者，不应将这些规范视为最终产品，而是看做未完成的状态。
+也许IHE对于临床研究的社区最大的价值在于联系EHR和公共卫生领域中想要进行合作的人员。RFD和其他Healthcare Link规范是由众多活跃的参与人员开发而成，RFD已经引起了除了研究领域之外的，特别是公共卫生和质量上报领域的人们的兴趣。IHE开放式的流程和对工作成
+果的不断演化为以后的开发提供了一片土壤，这些工作成果的使用者，尤其是那些早期的使用者，不应将这些规范视为最终产品，而是看做未完成的状态。
 
 
 ### 总结
